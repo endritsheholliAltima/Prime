@@ -8,6 +8,7 @@ package com.prime.task.prime.controller;
         import org.springframework.beans.factory.annotation.Autowired;
         import org.springframework.http.HttpStatus;
         import org.springframework.http.ResponseEntity;
+        import org.springframework.security.access.prepost.PreAuthorize;
         import org.springframework.web.bind.annotation.*;
 
         import javax.validation.Valid;
@@ -37,6 +38,7 @@ public class ProjectController {
 
     }
 
+    @PreAuthorize("hasRole('Admin')")
     @PostMapping(path = "/{projectId}")
     public ResponseEntity<Project> createProjectItems(@PathVariable long projectId, @Valid @RequestBody ProjectItemDTO projectItemDTO) {
         return new ResponseEntity(projectService.createProjectData(projectItemDTO, projectId), HttpStatus.CREATED);

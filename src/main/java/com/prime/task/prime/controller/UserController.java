@@ -1,13 +1,9 @@
 package com.prime.task.prime.controller;
 
-        import com.prime.task.prime.service.AuthService;
         import org.springframework.beans.factory.annotation.Autowired;
         import org.springframework.web.bind.annotation.PostMapping;
         import org.springframework.web.bind.annotation.RequestParam;
         import org.springframework.web.bind.annotation.RestController;
-
-        import static com.prime.task.prime.common.security.GenerateToken.*;
-        import com.prime.task.prime.dto.UserDTO;
 
 @RestController
 public class UserController {

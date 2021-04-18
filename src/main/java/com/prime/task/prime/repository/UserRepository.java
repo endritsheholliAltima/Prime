@@ -1,9 +1,10 @@
 package com.prime.task.prime.repository;
 
+import com.prime.task.prime.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ProjectItemRepository extends JpaRepository<ProjectItemModel,Long> {
-
+public interface UserRepository extends JpaRepository<User, Long> {
+    User findByUsername(String username);
 }
