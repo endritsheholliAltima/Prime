@@ -10,14 +10,12 @@ public class SampleMapper {
         ModelMapper modelMapper = new ModelMapper();
 
         return modelMapper.map(sample, SampleDTO.class);
-
     }
 
     public static Sample toSample(SampleDTO sampleDTO) {
         ModelMapper modelMapper = new ModelMapper();
 
         return modelMapper.map(sampleDTO, Sample.class);
-
     }
 }
 
