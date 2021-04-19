@@ -1,5 +1,3 @@
-
-
 package com.prime.task.prime.model;
 
         import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -13,7 +11,7 @@ package com.prime.task.prime.model;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "tasks")
-public class TaskModel extends AuditModel{
+public class TaskModel extends AuditModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,12 +1,12 @@
 package com.prime.task.prime.common.mappers;
 
-        import com.prime.task.prime.dto.ProjectDTO;
-        import com.prime.task.prime.model.Project;
-        import org.modelmapper.ModelMapper;
+import com.prime.task.prime.dto.ProjectDTO;
+import com.prime.task.prime.model.Project;
+import org.modelmapper.ModelMapper;
 
-        import java.util.Set;
-        import java.util.function.Function;
-        import java.util.stream.Collectors;
+import java.util.Set;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public class ProjectMapper {
 

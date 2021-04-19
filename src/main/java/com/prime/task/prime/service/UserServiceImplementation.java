@@ -31,7 +31,7 @@ public class UserServiceImplementation implements UserDetailsService, UserServic
 
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = userRepository.findByUsername(username);
-        if(user == null){
+        if (user == null) {
             throw new UsernameNotFoundException("Invalid username or password.");
         }
         return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), getAuthority(user));
@@ -52,11 +52,6 @@ public class UserServiceImplementation implements UserDetailsService, UserServic
     }
 
     @Override
-    public User findOne(String username) {
-        return userRepository.findByUsername(username);
-    }
-
-    @Override
     public User save(UserDto user) {
 
         User nUser = user.getUserFromDto();
@@ -66,7 +61,7 @@ public class UserServiceImplementation implements UserDetailsService, UserServic
         Set<Role> roleSet = new HashSet<>();
         roleSet.add(role);
 
-        if(nUser.getEmail().split("@")[1].equals("admin.edu")){
+        if (nUser.getEmail().split("@")[1].equals("admin.edu")) {
             role = roleService.findByName("Admin");
             roleSet.add(role);
         }

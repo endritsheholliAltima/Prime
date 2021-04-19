@@ -12,7 +12,7 @@ package com.prime.task.prime.model;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "notes")
-public class NoteModel extends AuditModel{
+public class NoteModel extends AuditModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
