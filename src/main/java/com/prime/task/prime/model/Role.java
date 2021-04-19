@@ -14,7 +14,7 @@ import javax.persistence.*;
 public class Role extends AuditModel {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @Column

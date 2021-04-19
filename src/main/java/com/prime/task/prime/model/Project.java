@@ -31,7 +31,7 @@ public class Project extends AuditModel {
     @ManyToOne(fetch = FetchType.LAZY)
     private Project parent;
 
-    @OneToMany(fetch = FetchType.LAZY,mappedBy = "parent")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "parent")
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Set<Project> children;
 
@@ -48,7 +48,6 @@ public class Project extends AuditModel {
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "project", fetch = FetchType.LAZY)
     private Set<AttachmentModel> attachments;
-
 
 
 }
