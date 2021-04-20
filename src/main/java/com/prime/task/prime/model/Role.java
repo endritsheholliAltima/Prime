@@ -3,19 +3,24 @@ package com.prime.task.prime.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "samples")
+@Table(name = "role")
+public class Role extends AuditModel {
 
-public class Sample {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(name = "name")
+    @Column
     private String name;
+
+    @Column
+    private String description;
+
 }
